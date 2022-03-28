@@ -1,0 +1,9 @@
+@use 'variables.json'
+@forward '@material/theme' with ($primary: variables.$primary, $secondary: variables.$secondary, $on-primary: variables.$on-primary)
+
+\:root
+  --mdc-theme-primary: variables.$primary
+  --mdc-theme-secondary: variables.$secondary
+  --mdc-theme-background: variables.$background
+
+@import 'main.sass'
