@@ -1,0 +1,20 @@
+@use 'mixins'
+
+body
+  font-family: 'Fira Mono', monospace
+
+  .link-on-primary
+    @include mixins.link-on-primary
+
+  .nav-link
+    text-transform: uppercase
+    user-select: none
+
+    .inactive-link
+      cursor: default
+      pointer-events: none
+
+  .link-primary
+    @include mixins.link-primary
+    & > a
+      @include mixins.link-primary
